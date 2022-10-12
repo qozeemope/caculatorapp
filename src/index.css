@@ -1,13 +1,95 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.app {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.calculator {
+  background: linear-gradient(191.34deg, #17181a -4.95%, #17181a 103.74%);
+  /* border: 3px solid black; */
+  border-radius: 39px;
+  height: 100%;
+  max-width: 375px;
+  margin: auto;
+  padding: 34px;
+  box-shadow: 20px 20px 50px brown, -30px -30px 60px brown;
+}
+
+.screen {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+  margin: auto;
+  border-radius: 10px;
+  gap: 15px;
+  background-color: silver;
+  display: grid;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.previous-operand {
+  font-size: 4.5rem;
+  margin-bottom: -50px;
+  justify-self: flex-end;
+  /* overflow: hidden;
+  text-overflow: clip; */
+}
+.current-operand {
+  font-size: 2.5rem;
+  margin-top: -20px;
+  justify-self: flex-end;
+}
+
+button {
+  cursor: pointer;
+  box-shadow: 1px 1px 1px skyblue, 1px 1px 1px skyblue;
+  border-style: none;
+  font-size: 15px;
+}
+
+button:hover {
+  background: linear-gradient(-45deg, brown, rgba(255, 255, 255, 0.25));
+}
+
+button:focus {
+  background: linear-gradient(-45deg, blue, rgba(255, 255, 255, 0.75));
+}
+
+.group {
+  max-width: 100%;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.first-row {
+  /* margin-right: 20px; */
+  width: 62px;
+  height: 40px;
+  border-radius: 24px;
+  background: linear-gradient(-45deg, #303136, rgba(255, 255, 255, 0.25));
+  color: #29a8ff;
+}
+
+.second-row {
+  width: 62px;
+  height: 62px;
+  margin-right: 20px;
+  border-radius: 16px;
+  background: linear-gradient(-45deg, #303136, rgba(255, 255, 255, 0.25));
+  color: #29a8ff;
+  font-size: 16px;
+}
+
+.last-end {
+  background: linear-gradient(-45deg, #005db2, rgba(255, 255, 255, 0.25));
+  margin-right: 0px;
+  width: 62px;
+  height: 62px;
+  border-radius: 16px;
+  color: #29a8ff;
+  font-size: 16px;
 }
